@@ -4,8 +4,7 @@ if (len(str1) != len(str2)):
 	print ("Strings are not anagram")
 else:
 	for i in range(len(str1)):
-		if str1[i] not in str2:
+		if (str1[i] not in str2 or str2[i] not in str1):
 			print ("String is not an anagram")
-			break
-		elif (i == len(str1)-1):
-			print ("String is an anagram")
+			exit()
+	print ("String is an anagram")
